@@ -3,11 +3,25 @@ git commit --amend -m "수정할 커밋 메세지"
 git reset --hard HEAD~최근커밋부터 삭제할 갯수
 (ex: git reset --hard HEAD~1 -> 최근 한개의 커밋 취소)
 
-git fetch
-git pull
+git fetch -> 다운로드 안하고 동기화X
+git pull -> 그냥 바로 동기화
 
 git log --oneline -> 커밋 메세지를 커밋당 한줄로(해시코드 메세지랑 커밋ID 등)
+git status -> 현재 경로에서 추가된 파일, 수정된 파일 등을 확인 가능
+
+git branch -> 생성한 브런치 종류들 확인 가능
+git branch test -> test라는 이름의 브런치 생성
+git checkout test -> test 브런치 활성화
 
 
-
+리눅스 명령어
 cat 파일이름 -> 파일내용 읽기
+vi filename vi파일명
+history 여태 친 명령여 확인 가능
+history | less   -> j랑 ,k 키로 한줄한줄 확인 가능
+
+vi로 편집할때 :wq! -> 느낌표는 강제로
+
+
+
+git fetch -> git log -> 이때 오리진 안 나오면 git pull
