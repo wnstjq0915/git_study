@@ -7,12 +7,31 @@ git fetch -> 다운로드 안하고 동기화X
 git pull -> 그냥 바로 동기화
 
 git log --oneline -> 커밋 메세지를 커밋당 한줄로(해시코드 메세지랑 커밋ID 등)
+git log --oneline --graph -> 깃 로그를 그래프로
 git status -> 현재 경로에서 추가된 파일, 수정된 파일 등을 확인 가능
 
 git branch -> 생성한 브런치 종류들 확인 가능
 git branch test -> test라는 이름의 브런치 생성
 git checkout test -> test 브런치 활성화
+git switch test -> 위와 같으나 좀 더 최신
 
+처음 푸쉬할 때
+git push -u origin 브랜치이름
+이렇게 해야 푸쉬 가능
+
+브랜치 생성해서 푸쉬한 다음에
+내용 병합할 때
+git checkout main          # main 브랜치로 이동
+git pull origin main       # 원격 최신 상태 반영
+git merge test   # test 내용을 main에 합침
+
+충돌(conflict)이 없다면 자동으로 머지됨.
+충돌이 있다면 수동으로 해결 후:
+git add .
+git commit
+
+그리고 원격에 반영하려면:
+git push origin main
 
 리눅스 명령어
 cat 파일이름 -> 파일내용 읽기
